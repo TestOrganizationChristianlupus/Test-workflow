@@ -30,11 +30,11 @@ jobs:
 
           git remote add tokenized https://nextcloud-cookbook-bot:${{ secrets.GH_BOT_TOKEN }}@github.com/TestOrganizationChristianlupus/Test-workflow.git
 
-      - name: Store config
-        uses: actions/upload-artifact@v2
-        with:
-          path: .git/config
-          name: Config file
+      # - name: Store config
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     path: .git/config
+      #     name: Config file
 
       - name: Push
         run: >-
