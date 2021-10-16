@@ -1,0 +1,33 @@
+name: Deploy
+
+on:
+  push:
+    branches: ['stable']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.actor != 'nextcloud-cookbook-bot'
+
+    steps:
+      - name: Debug
+        run: echo "I am running your code"
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+        # with:
+        #   ref: ${{ github.ref }}
+      
+      # - name: Create new commit and push it
+      #   run: |
+      #     date > theDate
+      #     git add theDate
+          
+      #     git config user.name Bot
+      #     git config user.email bot@example.com
+
+      #     git commit -m "Added/updated date file"
+
+      #     git push 
+
+
