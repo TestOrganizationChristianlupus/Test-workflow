@@ -18,16 +18,18 @@ jobs:
         # with:
         #   ref: ${{ github.ref }}
       
-      # - name: Create new commit and push it
-      #   run: |
-      #     date > theDate
-      #     git add theDate
+      - name: Create new commit and push it
+        run: |
+          date > theDate
+          git add theDate
           
-      #     git config user.name Bot
-      #     git config user.email bot@example.com
+          git config user.name Bot
+          git config user.email bot@example.com
 
-      #     git commit -m "Added/updated date file"
+          git commit -m "Added/updated date file"
 
-      #     git push 
+          git remote add tokenized https://nextcloud-cookbook-bot:${{ secrets.GH_BOT_TOKEN }}@github.com/TestOrganizationChristianlupus/Test-workflow.git
+
+          git push tokenized stable
 
 
