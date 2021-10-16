@@ -29,6 +29,6 @@ jobs:
       
       - name: Get event
         env:
-          EVT: ${{ github.event }}
+          EVT: ${{ toJSON(github.event) }}
         run: echo "$EVT"
 
