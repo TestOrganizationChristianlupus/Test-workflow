@@ -37,6 +37,9 @@ jobs:
           name: Config file
 
       - name: Push
-        run: git push tokenized stable
+        run: >-
+          git
+          -c "http.https://github.com/.extraheader="
+          push tokenized stable
 
 
